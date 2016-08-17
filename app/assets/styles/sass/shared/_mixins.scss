@@ -1,0 +1,76 @@
+@mixin custom-button($color) {
+  background-color: $color;
+  &:after, &:before {
+    border-width: 34px 16px 0 0;
+  }
+  &:before {
+    left: -16px;
+    border-color: transparent $color;
+  }
+  &:after {
+    border-color: $color transparent;
+  }
+}
+
+@mixin radial-gradient($from, $to) {
+  background: -moz-radial-gradient(center, circle cover, $from 0%, $to 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $from), color-stop(100%, $to));
+  background: -webkit-radial-gradient(center, circle cover, $from 0%, $to 100%);
+  background: -o-radial-gradient(center, circle cover, $from 0%, $to 100%);
+  background: -ms-radial-gradient(center, circle cover, $from 0%, $to 100%);
+  background: radial-gradient(center, circle cover, $from 0%, $to 100%);
+  background-color: $from;
+}
+
+%left-panel {
+  width: px2rem(350);
+  background-color: $primary-color;
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  float: left;
+  overflow: hidden;
+  color: $secondary-color;
+
+  @media screen and (max-width: $mobile-max) {
+    width: 100%;
+    height: px2rem(65);
+    text-align: justify;
+  }
+}
+
+%right-panel {
+  height: 100vh;
+  position: relative;
+  @media screen and (min-width: $mobile-max) {
+    overflow: auto;
+  }
+}
+
+%table-without-border {
+  table {
+    width: 100%;
+    tr {
+      border: 0;
+      td {
+        border: 0;
+      }
+    }
+  }
+}
+
+//Shared
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  @media screen and (max-width: $mobile-max) {
+    display: none;
+  }
+}
+
+.hidden {
+   display: none;
+}

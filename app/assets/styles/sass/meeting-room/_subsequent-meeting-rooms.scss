@@ -1,0 +1,42 @@
+.subsequent-meetings {
+  @extend %left-panel;
+  &_clock {
+    margin: px2rem(20) px2rem(10);
+  }
+
+  &_headline {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: italic;
+    font-size: px2rem(30);
+    p {
+      margin: px2rem(10);
+    }
+  }
+
+  &_table {
+    width: 100%;
+    tr {
+      border: 0;
+      td {
+        padding: px2rem(15);
+        border: 0;
+        font-size: px2rem(18);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      td.available {
+        padding: 0;
+        width: 15px;
+        background-color: $available-color;
+      }
+
+      td.booked {
+        padding: 0;
+        width: 15px;
+        background-color: $booked-color;
+      }
+    }
+  }
+}

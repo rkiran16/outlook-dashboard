@@ -1,0 +1,12 @@
+/**
+ * Created by rkanculakunta on 2/17/16.
+ */
+
+.meeting-room {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@import "subsequent-meeting-rooms";
+@import "current-meeting";

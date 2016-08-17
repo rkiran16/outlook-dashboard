@@ -1,0 +1,36 @@
+.sheer-button {
+  line-height: 34px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-width: 0;
+  }
+
+  a{
+    text-decoration: none;
+    text-outline: none;
+    color: inherit;
+  }
+}
+
+.available {
+  color: #01ff09;
+  @include custom-button($available-color);
+}
+
+.in-use {
+  color: #feff03;
+  @include custom-button($booked-color);
+}
+
+.booked {
+  color: #ec5252;
+  @include custom-button($in-use-color);
+}

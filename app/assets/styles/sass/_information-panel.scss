@@ -1,0 +1,64 @@
+.information-panel {
+  @extend %left-panel;
+
+  &_logo {
+    fill: $secondary-color;
+    padding: px2rem(30) px2rem(20);
+    width: px2rem(251);
+    height: px2rem(84);
+    display: inline-block;
+    @media screen and (max-width: $mobile-max) {
+      padding: px2rem(10);
+      width: px2rem(120);
+      height: px2rem(60);
+    }
+  }
+
+  &_count {
+     font-size: px2rem(34);
+
+     .count {
+        margin: 0;
+        font-size: px2rem(100);
+     }
+
+     .available-count {
+        color: $resource-color;
+     }
+
+     .booked-count {
+         color: $in-use-color;
+     }
+  }
+
+  &_clock-container {
+    color: $secondary-color;
+    @media screen and (max-width: $mobile-max) {
+      display: inline-block;
+      padding: px2rem(5) px2rem(5) px2rem(5) px2rem(5);
+      vertical-align: top;
+    }
+
+    &_clock {
+      font-size: px2rem(69);
+      margin: 0;
+      font-weight: 700;
+      @media screen and (max-width: $mobile-max) {
+        font-size: px2rem(28);
+      }
+    }
+
+    &_date {
+      font-size: px2rem(48);
+      text-transform: uppercase;
+      margin: 0;
+      @media screen and (max-width: $mobile-max) {
+        font-size: px2rem(16);
+      }
+    }
+  }
+
+  &_weather {
+    overflow: hidden;
+  }
+}

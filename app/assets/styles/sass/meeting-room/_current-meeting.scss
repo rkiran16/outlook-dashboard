@@ -1,0 +1,56 @@
+.current-meeting-box {
+  @extend %right-panel;
+  color: $secondary-color;
+
+  &_headline {
+    font-size: px2rem(35);
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+
+    &_in-use {
+      float: left;
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 15px;
+      background-color: $in-use-color;
+    }
+
+    p {
+      display: inline-block;
+    }
+  }
+
+  &_info {
+    padding-left: px2rem(30);
+    font-weight: 400;
+
+    &_meeting {
+      p {
+        display: inline-block;
+        padding-right: px2rem(20);
+        font-size: px2rem(30);
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-top: px2rem(10);
+        margin-bottom: px2rem(10);
+      }
+    }
+
+    &_host {
+      font-size: px2rem(22);
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-top: px2rem(5);
+      margin-bottom: px2rem(10);
+    }
+  }
+
+  hr {
+    margin: 0;
+  }
+}

@@ -1,0 +1,28 @@
+@import "shared/normalize";
+@import "vw-starter/vw-starter";
+@import "variables";
+
+html {
+  @include vw-base;
+}
+
+@import "shared/weather-icons";
+@import "shared/mixins";
+@import "shared/buttons";
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $secondary-color;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+
+  .main-container {
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+@import "information-panel";
+@import "meeting-room/meeting-room-list";
+@import "meeting-room/meeting-room";

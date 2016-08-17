@@ -1,0 +1,59 @@
+.meeting-room-panel {
+  @extend %right-panel;
+
+  &_headline {
+    font-size: px2rem(30);
+    text-align: center;
+    text-transform: uppercase;
+    color: $primary-color;
+    font-weight: 400;
+
+    p {
+      margin: px2rem(10);
+      display: inline-block;
+    }
+
+    img {
+      width: px2rem(55);
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    @media screen and (max-width: $mobile-max) {
+      display: none;
+    }
+  }
+
+  &_meeting-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0;
+    color: $primary-color;
+    text-transform: uppercase;
+    overflow: auto;
+    @media screen and (max-width: $mobile-max) {
+      font-size: px2rem(10);
+    }
+
+    tr {
+      background: $secondary-color;
+      border: 1px solid $gray-color;
+      td {
+        padding: px2rem(8);
+
+        @media screen and (max-width: $mobile-max) {
+          padding: px2rem(5);
+        }
+        &:first-child {
+          //width: px2rem(515);
+          @media screen and (max-width: $mobile-max) {
+            width: 50%;
+          }
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
